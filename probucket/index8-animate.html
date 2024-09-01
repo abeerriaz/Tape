@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prolab - Product Landing Page </title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Flat Icon -->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- AOS css -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <style >
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+
+        }
+
+        .main{
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #001539;
+        }
+        .profile-card{
+          position: relative;
+
+          width: 220px;
+          height: 220px;
+          background: #fff;
+          padding: 30px;
+          border-radius: 50%;
+          box-shadow: 0 0 22px #3336;
+          transition: .6s;
+          margin: 0 25px;
+        }
+        .profile-card:hover{
+          border-radius: 10px;
+          height: 260px;
+        }
+        .profile-card .img{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: .6s;
+          z-index: 99;
+        }
+        .profile-card:hover .img{
+          transform: translateY(-60px);
+        }
+        .img img{
+          width: 100%;
+          border-radius: 50%;
+          box-shadow: 0 0 22px #3336;
+          transition: .6s;
+        }
+        .profile-card:hover img{
+          border-radius: 10px;
+        }
+        .caption{
+          text-align: center;
+          transform: translateY(-80px);
+          opacity: 0;
+          transition: .6s;
+        }
+        .profile-card:hover .caption{
+          opacity: 1;
+        }
+        .caption h3{
+          font-size: 21px;
+          font-family: sans-serif;
+        }
+        .caption p{
+          font-size: 15px;
+          color: #0c52a1;
+          font-family: sans-serif;
+          margin: 2px 0 9px 0;
+        }
+        .caption .social-links a{
+          color: #333;
+          margin-right: 15px;
+          font-size: 21px;
+          transition: .6s;
+        }
+        .social-links a:hover{
+          color: #0c52a1;
+        }
+     
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            flex: 1 1 calc(33.33% - 20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            background-color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-11px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+
+       </style>
+</head>
+
+<body class="home7">
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="cube-wrapper">
+                <div class="cube-folding">
+                    <span class="leaf1"></span>
+                    <span class="leaf2"></span>
+                    <span class="leaf3"></span>
+                    <span class="leaf4"></span>
+                </div>
+                <span class="loading" data-name="Loading">Loading</span>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- Navebar Area start -->
+    <header class="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo-color.png" alt="">
+            </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                        <div class="collapse navbar-collapse" id="mainmenu">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Products">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Suppliers">Suppliers</a>
+                                </li>
+                          
+                       
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#Team">Our Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navebar Area End -->
+
+    <!-- Hero Area Start -->
+    <div id="home" class="hero-area">
+        <div class="container" style="margin-top: -200px;">
+            <div class="row">
+                <div class="col-lg-6 d-flex align-self-center">
+                    <div class="left-content">
+                        <div class="content">
+                            <h1 class="title">
+                                Delivering Vital Medical Solutions with Care and Precision.
+                            </h1>
+
+                            <p class="subtitle">
+                                We specialize in providing high-quality medical products to healthcare facilities and professionals. With a commitment to excellence, we ensure that our extensive range of supplies meets the needs of your practice, helping you deliver the best care to your patients.
+                            </p>
+                            <div class="links">
+                                <a href="#contact" class="mybtn3 mybtn-light"><span>Get In Touch</span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-first order-lg-last">
+                    <div class="right-img" style="margin-left: 150px; margin-top: 150px; scale: 1.5;">
+
+                        <img class="img-fluid img" src="assets/images/w4.png" alt="Company Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Area End -->
+
+    <!-- About Area Start -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="section-title extra">
+                        <h2 class="title">Why we are the Best</h2>
+                        <p>
+                            Sticking to our high standards, we deliver solutions that exceed expectations and add value.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="box" data-aos="fade-right">
+                        <div class="inner-box">
+                            
+                            <h4 class="title">Unmatched Quality Standards</h4>
+                            <p class="text">
+                                Our products meet the highest industry standards, ensuring you receive only the best in medical supplies, consistently delivered with precision.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box" data-aos="fade-up">
+                        <div class="inner-box">
+                           
+                            <h4 class="title">Expertly Sourced, Trusted Products</h4>
+                            <p class="text">
+                                We partner with leading manufacturers to bring you the most trusted and effective medical products on the market, tailored to meet your needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box" data-aos="fade-left">
+                        <div class="inner-box">
+                           
+                            <h4 class="title">Dedicated Customer Support</h4>
+                            <p class="text">
+                                Our team is here for you, offering personalized support and expert guidance to ensure your experience is seamless from order to delivery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- About Area End -->
+
+    <!-- We are best Area Start -->
+    <section class="whaybest" id="Products">
+        <div class="container">
+            <div class="section-title" style="margin-bottom: 150px;">
+                <h1 class="title">Our Products</h1>
+                <p>
+                    Find below a comprehensive list of the products we source and distribute. 
+                </p>
+            </div>
+            <div class="row row-one">
+                <div class="col-lg-6 d-flex">
+                    <div class="about-img" data-aos="fade-right">
+                        <img src="assets/images/w3.png" alt="" style=" padding-right: 75px;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="info" data-aos="fade-left">
+                        <h2 class="info-title">
+                            HYNAUT Products
+
+                        </h2>
+                        <ul class="feature-list">
+                            <li>
+                                
+                                <div class="content">
+                                    <h4>Hynaut Polyethylene Tape</h4>
+                                    <p>Versatile and waterproof tape designed for various medical applications and secure adhesion
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                
+                                <div class="content">
+                                    <h4>Hyanut medical paper tapes</h4>
+                                    <p>Gentle yet strong adhesive tape for secure and breathable wound care.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                
+                                <div class="content">
+                                    <h4>Hanson Zinc Oxide plaster</h4>
+                                    <p>Durable and effective plaster for reliable wound protection and support.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                
+                                <div class="content">
+                                    <h4>Easy Tear-off</h4>
+                                    <p>New had happen unable uneasy. Drawings pronounce can be followed improved out.
+                                    </p>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-6">
+                    <div class="info" data-aos="fade-right">
+                        <div class="round-shape"></div>
+                        <h2 class="info-title">
+                            Joleda Products
+                        </h2>
+                        <ul class="feature-list">
+                            <li>
+                               
+                                <div class="content">
+                                    <h4>Latex Examination Gloves</h4>
+                                    <p> Versatile and reliable for routine medical examinations and procedures.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                <div class="icon">
+                                    <i class="flaticon-speech-bubble"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Quality two</h4>
+                                    <p>New had happen unable uneasy. Drawings pronounce can be followed improved out.
+                                    </p>
+                                </div>
+                            </li> -->
+                            <li>
+                             
+                                <div class="content">
+                                    <h4>Latex Surgical Gloves</h4>
+                                    <p>Precision-engineered for optimal dexterity and protection in sterile environments.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                <div class="icon">
+                                    <i class="flaticon-wifi"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Quality four</h4>
+                                    <p>New had happen unable uneasy. Drawings pronounce can be followed improved out.
+                                    </p>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex order-first order-lg-last">
+                    <div class="about-img" data-aos="fade-left">
+                        <img src="assets/images/w1.png" style="scale: 3; padding-top:80px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-one">
+                <div class="col-lg-6 d-flex">
+                    <div class="about-img" data-aos="fade-right">
+                        <img src="assets/images/w9.png" alt="" style="scale: 2; padding-left: 45px; padding-top: 80px;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="info" data-aos="fade-left">
+                        <h2 class="info-title">
+                            Baihe Medical 
+
+                        </h2>
+                        <ul class="feature-list">
+                            <li>
+                                
+                                <div class="content">
+                                    <h4>Infusion Set (With and Without Y Port)</h4>
+                                    <p>Precision-engineered infusion sets for seamless and reliable fluid delivery.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                
+                                <div class="content">
+                                    <h4>Dialyser</h4>
+                                    <p>High-performance dialysers for efficient and effective renal filtration.s
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                
+                                <div class="content">
+                                    <h4>Fistula Needle</h4>
+                                    <p>Durable and precise BTL fistula needles designed for optimal vascular access.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                
+                                <div class="content">
+                                    <h4>Easy Tear-off</h4>
+                                    <p>New had happen unable uneasy. Drawings pronounce can be followed improved out.
+                                    </p>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-6">
+                    <div class="info" data-aos="fade-right">
+                        <div class="round-shape"></div>
+                        <h2 class="info-title">
+                            Injection Syringes
+                        </h2>
+                        <ul class="feature-list">
+                            <li>
+                                
+                                <div class="content">
+                                    <h4>Auto disable Syringes 3/5/10 ml</h4>
+                                    <p> Safe and user-friendly auto-disable syringes designed for 3ml, 5ml and 10ml doses.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                <div class="icon">
+                                    <i class="flaticon-speech-bubble"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Quality two</h4>
+                                    <p>New had happen unable uneasy. Drawings pronounce can be followed improved out.
+                                    </p>
+                                </div>
+                            </li> -->
+                            <li>
+                             
+                                <div class="content">
+                                    <h4>10ml Conventional syringes</h4>
+                                    <p>Reliable 10ml syringe for precise and consistent medication administration.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                <div class="icon">
+                                    <i class="flaticon-wifi"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Quality four</h4>
+                                    <p>New had happen unable uneasy. Drawings pronounce can be followed improved out.
+                                    </p>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex order-first order-lg-last">
+                    <div class="about-img" data-aos="fade-left">
+                        <img src="assets/images/w5.png" style="scale: 2.5   ; padding-top: 120px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--We are best Area Start -->
+
+    <h2 class="title" style="padding-left: 400px;">Products Coming Soon!</h2>
+
+    <section class="cards-container">
+        <div class="card">
+            <img src="assets/images/soon2.jpg" alt="Image 1">
+            <h3>Hynaut Alchohal Swab</h3>
+        </div>
+        <div class="card">
+            <img src="assets/images/soon3.jpg" alt="Image 2">
+            <h3>Hynaut Cooling patch</h3>
+        </div>
+        <div class="card">
+            <img src="assets/images/soon1.jpg" alt="Image 3">
+            <h3>Hynaut Pregnency Strips</h3>
+        </div>
+        <div class="card">
+            <img src="assets/images/soon4.jpeg" alt="Image 4">
+            <h3>Hynaut BP Set</h3>
+        </div>
+        <div class="card">
+            <img src="assets/images/soon5.jpeg" alt="Image 5">
+            <h3>Hynaut zinc oxide plaster</h3>
+        </div>
+        <div class="card">
+            <img src="assets/images/soon6.jpg" alt="Image 6">
+            <h3>Hynaut pvc oblique electric tape</h3>
+        </div>
+    </section>
+
+
+    <!-- Deal Of the Week Start -->
+    <section class="dealofweek" id="Suppliers">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="section-title">
+                        <h2 class="title">Our Suppliers</h2>
+                        <p>
+                            Partnering with Leading Manufacturers to Bring You the Best in Medical Supplies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="deal-slider-area" data-aos="fade-up">
+                        <div class="deal-slider">
+                            <div class="item">
+                                <div class="content">
+                                    <div class="row">
+                                        <div >
+                                            <div >
+                                                <img src="assets/images/logo-5.png" alt="" style="padding-left: 220px;" >
+                                                <p style="padding-inline: 60px; padding-top: 50px;">
+                                                    <b>Hynaut is a prominent Chinese manufacturer specializing in high-quality medical products, including diagnostic equipment and therapeutic devices. With a strong focus on innovation and precision, Hynaut delivers reliable solutions that meet international standards. Their commitment to excellence is evident in their comprehensive range of products designed to support healthcare professionals globally. We are proud to be their exclusive long-term partners in the whole region. 
+                                                    
+
+                                                    <br>For more information about the company, visit their <a href="https://www.hainuocn.com/html/industry/690.html" target="_blank">website</a>.
+                                                    </b>
+                                                </p>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="row">
+                                        <div >
+                                            <div >
+                                                <img src="assets/images/JOLEDA.jpg" alt="" style="padding-left: 250px; padding-bottom: 20px;scale: 2;" >
+                                                <p style="padding-inline: 60px; padding-top: 50px; font-style: bold;">
+                                                    <b>Joleda is a leading Chinese manufacturer of latex gloves tailored for medical applications. Known for their precision and reliability, Joleda ensures that each glove meets rigorous quality standards to support healthcare professionals in delivering safe and effective care. Their state-of-the-art facilities and commitment to innovation set them apart in the industry. We have a fruitful and healthy relationship with the company.
+                                                        <br>For more information about the company, visit their <a href="https://www.joledaglove.com/" target="_blank">website</a>.
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <div class="main" id="Team">
+        <h2>Executive Personnel</h2>
+        <div data-aos="fade-right">
+            <div class="profile-card">
+                <div class="img">
+                    <img src="assets/images/Team-1.jpg">
+                </div>
+                <div class="caption">
+                    <h3 style="color: black;">Muhammad Hanif Khokhar</h3>
+                    <p style="color: black;">Chairman </p>
+                    <div class="social-links">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-up">
+            <div class="profile-card">
+                <div class="img">
+                    <img src="assets/images/Team-3.jpg">
+                </div>
+                <div class="caption">
+                    <h3 style="color: black;">Muhammad Shafiq Khokhar</h3>
+                    <p style="color: black;">Chief Executive Officer</p>
+                    <div class="social-links">
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-left">
+            <div class="profile-card">
+                <div class="img">
+                    <img src="assets/images/Team-2.jpg">
+                </div>
+                <div class="caption">
+                    <h3 style="color: black;">Momin Latif Khokhar</h3>
+                    <p style="color: black;">Director Sales </p>
+                    <div class="social-links">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Subscribe Area Start -->
+    <div class="subscribe-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="section-title extra">
+                        <h2 class="title">Subscribe to get updates</h2>
+                        <p>
+                            Reach out to us for any inquiries, support, or feedback—our team is here to assist you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="newsletter-form-area" data-aos="fade-up">
+                        <form action="#">
+                            <input type="email" placeholder="Your email address...">
+                            <button type="submit">
+                 <span>Subscribe</span> 
+                </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Subscribe Area End -->
+
+
+
+    <!-- Contact Area Start -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="section-title">
+                        <h2 class="title">Contact Us</h2>
+                        <p>
+                            Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His secure called esteem praise.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-box box1" data-aos="fade-right">
+                        <div class="left">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="content">
+                                <p>+333 123 4565 7898</p>
+                                <p>+333 153 4575 7893</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-box box2" data-aos="fade-up">
+                        <div class="left">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="content">
+                                <p>demoname@name.com</p>
+                                <p>anothername@name.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-box box3" data-aos="fade-left">
+                        <div class="left">
+                            <div class="icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="content">
+                                <p>140 Berkley Street, Philadelphia, Pennsylvania</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-form-wrapper" data-aos="fade-right">
+                        <form id="contact-form" method="POST">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="input-field borderd" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="email" class="input-field borderd" id="email" placeholder="Enter Your Phone Number" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="input-field borderd textarea" rows="3" id="message" placeholder="Write your message here" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="mybtn3 mybtn-bg"> <span>Send Message</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="google_map_wrapper" data-aos="fade-left">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.3362149737545!2d90.3866213154314!3d23.73538709526567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8c6d25f0a91%3A0xf8da21d64c3856dc!2sNew%20Work%20Aquarium%20Center!5e0!3m2!1sen!2sus!4v1593765590933!5m2!1sen!2sus"
+                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Area End -->
+
+
+    <!-- Footer Section Start -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="footer-info-area">
+                        <div class="footer-logo">
+                            <a href="#" class="logo-link">
+                <img src="assets/images/logo-color.png" alt="">
+              </a>
+                        </div>
+                        <div class="text">
+                            <p>Conveying or northward offending admitting perfectly my. Colonel gravity get thought fat smiling add but.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="copy-bg text-center">
+            <p>Copyright © 2024. All rights reserved by
+                <a href="index.html">Company</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Back to Top Start -->
+    <div class="bottomtotop">
+        <i>></i>
+    </div>
+    <!-- Back to Top End -->
+
+
+    <!-- jquery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- popper -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- way poin js-->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!-- owl carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <!-- aos js-->
+    <script src="assets/js/aos.js"></script>
+    <!-- counterup js-->
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <!-- easing js-->
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <!-- Map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7eALQrRUekFNQX71IBNkxUXcz-ALS-MY&sensor=false"></script>
+    <script src="assets/js/gmap.js"></script>
+    <!-- main -->
+    <script src="assets/js/contact.js"></script>
+    <!-- main -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
